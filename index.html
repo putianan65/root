@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ระบบบันทึกค่าใช้จ่าย</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- เพิ่ม Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>ระบบบันทึกค่าใช้จ่าย</h1>
+
+      <!-- ฟอร์มเพิ่มรายการใหม่ -->
+      <div class="expense-form">
+        <h2>เพิ่มรายการใหม่</h2>
+
+        <form id="expenseForm">
+          <div class="form-group">
+            <label for="description">รายการ:</label>
+            <input type="text" id="description" required />
+          </div>
+
+          <div class="form-group">
+            <label for="amount">จำนวนเงิน:</label>
+            <input type="number" id="amount" required min="0" />
+          </div>
+
+          <div class="form-group">
+            <label for="category">ประเภท:</label>
+            <select id="category" required>
+              <option value="food">อาหาร</option>
+              <option value="transport">การเดินทาง</option>
+              <option value="entertainment">บันเทิง</option>
+              <option value="shopping">ช้อปปิ้ง</option>
+              <option value="bills">ค่าบริการ</option>
+            </select>
+          </div>
+
+          <button type="submit">บันทึก</button>
+        </form>
+      </div>
+
+      <!-- แสดงสรุปค่าใช้จ่าย -->
+      <div class="expense-summary">
+        <h2>สรุปค่าใช้จ่าย</h2>
+
+        <div class="summary-container">
+          <div class="total-box">
+            <h3>ยอดรวมทั้งหมด</h3>
+
+            <p id="totalAmount">0 บาท</p>
+          </div>
+
+          <div class="chart-container">
+            <canvas id="expenseChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- แสดงรายการค่าใช้จ่าย -->
+      <div class="expense-list">
+        <h2>รายการค่าใช้จ่าย</h2>
+
+        <div id="expenseItems"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

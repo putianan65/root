@@ -1,0 +1,169 @@
+/* ตั้งค่าพื้นฐาน */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+/* จัดการฟอร์ม */
+.expense-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* สรุปค่าใช้จ่าย */
+.expense-summary {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.summary-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.total-box {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+
+.total-box h3 {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.total-box p {
+    font-size: 24px;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+.chart-container {
+    flex: 2;
+    min-width: 300px;
+    height: 300px;
+}
+
+/* รายการค่าใช้จ่าย */
+.expense-list {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.expense-item:last-child {
+    border-bottom: none;
+}
+
+.expense-info {
+    flex: 1;
+}
+
+.expense-category {
+    color: #666;
+    font-size: 14px;
+}
+
+.expense-amount {
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+    padding: 5px 10px;
+    margin-left: 10px;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+/* ปรับแต่งสำหรับหน้าจอขนาดเล็ก */
+@media (max-width: 768px) {
+    .summary-container {
+        flex-direction: column;
+    }
+    
+    .chart-container {
+        height: 250px;
+    }
+}
